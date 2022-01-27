@@ -15,6 +15,7 @@ The `app.db` database file will be recreated if it doesn't exist.
 
 # Interface
 
+```
 GET /
 	Response 200
 		Content-Type: text/plain
@@ -66,3 +67,4 @@ POST /{mind-map-nodeN}...
 		Body:
 			"message": string
 				A message explaining that the node has been created, or updated if it already existed
+```
