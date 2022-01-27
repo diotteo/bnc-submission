@@ -3,6 +3,8 @@ from flask_sqlalchemy import SQLAlchemy
 
 db = SQLAlchemy()
 
+from exceptions import *
+
 class Node(db.Model):
     id = db.Column(Integer, primary_key=True)
     slug = db.Column(String(100), nullable=True)
@@ -15,6 +17,9 @@ class Node(db.Model):
 
     @staticmethod
     def from_json(json):
-        slug = json['slug']
-        text = json['text']
+        slug = json.get('slug', json.get('id'))
+        text = json.get('text', slug)
+
+        if slug is None:
+            raise MindMapError('Either slug or id must be specified')
         return Node(slug=slug, text=text)
