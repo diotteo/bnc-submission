@@ -1,11 +1,11 @@
 # Starting the app
 
-* To start the app in a Docker container, from your machine, run bin/docker_build.bash. The script will call bin/run.sh from the container.
+* To start the app in a Docker container, from your machine, run `bin/docker_build.bash`. The script will call `bin/run.sh` from the container.
 
-* To start the app from the container (or possibly any suitable environment although that is untested), run the bin/run.sh file.
-The app.db database file will be recreated if it doesn't exist.
+* To start the app from the container (or possibly any suitable environment although that is untested), run the `bin/run.sh` file.
+The `app.db` database file will be recreated if it doesn't exist.
 
-* To check the coverage, run bin/coverage.sh: it will run the tests and open them in your default browser
+* To check the coverage, run `bin/coverage.sh`: it will run the tests and open them in your default browser
 
 # Design
 
