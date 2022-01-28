@@ -2,6 +2,7 @@ import sys
 import unittest
 from unittest.mock import Mock, MagicMock, patch
 
+sys.modules['sqlalchemy'] = Mock()
 import tests.mock_models as models
 sys.modules['models'] = models
 Node = models.Node
