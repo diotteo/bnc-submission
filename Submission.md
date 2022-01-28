@@ -1,3 +1,9 @@
+# Requirements
+
+* Running the app should only require Docker as the Python3 interpreter and the requirements will be installed by Docker itself
+* The coverage should run from a developer's machine, provided the python package `coverage` is installed.
+`Flask`, `SQLAlchemy` and `flask-sqlalchemy` are not needed for the tests themselves as they are all mocked.
+
 # Starting the app
 
 * To start the app in a Docker container, from your machine, run `bin/docker_build.bash`. The script will call `bin/run.sh` from the container.
